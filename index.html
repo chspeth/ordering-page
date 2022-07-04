@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание в ЛАБИРИНТ</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="index-page">
+    <main class="index-page__main main-page">
+      <h1 class="main-page__header">Оформление заказа</h1>
+      <div class="main-page__wrapper">
+        <div class="main-page__left-wrapper delivery">
+          <h2 class="delivery__header">Доставка</h2>
+          <div class="delivery__button">
+            <button class="through-button button-prev non-active-button button" type="button" disabled></button>
+            <button class="through-button button-next button" type="button"></button>
+          </div>
+          <ul class="delivery__list address-list">
+            <li class="address-list__item">
+              <div class="address-list__address-box current-delivery-method">
+                <b class="address-list__method">Почта России, курьер — 24-26 сент.</b>
+                <span class="address-list__address">ул. Академика Королева, 73/3, Петропавловск- Камчатский, 683000</span>
+                <span class="address-list__price">+367 ₽</span>
+              </div>
+            </li>
+            <li class="address-list__item">
+              <div class="address-list__address-box">
+                <b class="address-list__method">Лабиринт, курьер — 25 сент.</b>
+                <span class="address-list__address">Можайское шоссе, д. 21, кв. 50, Москва, 121471</span>
+                <span class="address-list__price">0 ₽</span>
+              </div>
+            </li>
+          </ul>
+          <button class="delivery__method-button button" type="button">Выбрать новое место и способ</button>
+          <ul class="delivery__list time-list">
+            <li class="time-list__list">
+              <div class="time-list__box current-delivey-time">
+                <span class="time-list__days-choice">пн, 24 сен<span class="time-list__period"> — ср, 26 сен</span></span><br>
+                <span class="time-list__time-choice">10:00–19:00</span>
+              </div>
+            </li>
+            <li class="time-list__list">
+              <div class="time-list__box">
+                <span class="time-list__days-choice">чт, 27 сен<span class="time-list__period"> — пт, 28 сен</span></span><br>
+                <span class="time-list__time-choice">10:00–19:00</span>
+              </div>
+            </li>
+            <li class="time-list__list">
+              <button class="time-list__button button" type="button">Другие дата и время</button>
+            </li>
+          </ul>
+          <form class="delivery__additional-options options-form" method="post" action="">
+            <ul class="options-form__list">
+              <li class="options-form__item">
+                <label class="options-form__control">
+                  <input class="options-form__checkbox visually-hidden" type="checkbox" name="notifications" checked>
+                  <span class="options-form__control-mark button"></span>
+                  <span class="options-form__control-label">Viber/СМС уведомления о статусе заказа</span>
+                </label>
+              </li>
+              <li class="options-form__item">
+                <label class="options-form__control">
+                  <input class="options-form__checkbox visually-hidden" type="checkbox" name="contactless-delivery">
+                  <span class="options-form__control-mark button"></span>
+                  <span class="options-form__control-label">Оставить у двери (бесконтактная доставка)</span>
+                </label>
+              </li>
+            </ul>
+          </form>
+          <h2 class="delivery__header receiver-header">Получатель</h2>
+          <form class="delivery__additional-options receiver-form" method="post" action="">
+            <div class="receiver-form__common-wrapper">
+              <div class="receiver-form__wrapper">
+                <span class="receiver-form__placeholder">Имя и фамилия<span class="receiver-form__mobile-text">, как в паспорте</span></span>
+                <span class="receiver-form__current-option current-option-name"></span>
+                <label class="receiver-form__label" for="name"></label>
+                <select class="receiver-form__select name-select" id="name">
+                  <option class="receiver-form__option" value="Вольфганг Вениаминович" name="current-name">Вольфганг Вениаминович</option>
+                </select>
+              </div>
+              <div class="receiver-form__wrapper">
+                <span class="receiver-form__placeholder">Контактный телефон</span>
+                <span class="receiver-form__current-option current-option-phone"></span>
+                <label class="receiver-form__label" for="phone">
+                </label>
+                <select class="receiver-form__select phone-select" id="phone">
+                  <option class="receiver-form__option" value="+7 910 234-56-78" name="current-phone">+7 910 234-56-78</option>
+                  <option class="receiver-form__option" value="+7 910 234-56-80" name="current-phone">+7 910 234-56-80</option>
+                </select>
+              </div>
+            </div>
+            <div class="receiver-form__button">
+              <button class="receiver-form__new-receiver-button new-button button">Новый получатель</button>
+              <button class="receiver-form__new-phone-button new-button button">Новый телефон</button>
+            </div>
+          </form>
+        </div>
+        <div class="main-page__right-wrapper cart popup-close">
+          <p class="cart__header">
+            <b>В заказе <span class="cart__good-amount">4</span> товара</b> (2 кг)
+          </p>
+          <table class="cart__list">
+            <tbody class="cart__table">
+              <tr class="cart__row">
+                <td class="cart__title">Цена товаров</td>
+                <td class="cart__number good-price">29 456 ₽</td>
+              </tr>
+              <tr class="cart__row">
+                <td class="cart__title">Все скидки</td>
+                <td class="cart__number total-sale">–7 732 ₽</td>
+              </tr>
+              <tr class="cart__row mobile-hidden-row">
+                <td class="cart__title">Скидка за предоплату</td>
+                <td class="cart__number sale-percent">–3%</td>
+              </tr>
+              <tr class="cart__row popup-row">
+                <td class="cart__title">К оплате:</td>
+                <td class="cart__number total-price-popup">21 072 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="cart__wrapper">
+            <button class="cart__close-button button">Закрыть подробности</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <button class="footer__button button">Оформить и оплатить</button>
+        <dl class="footer__total-list">
+          <dt class="footer__title"><span class="footer__desktop-text">Итого </span>к оплате<span class="footer__desktop-text"> на сайте</span>:</dt>
+          <dd class="footer__price total-price">21 072 ₽</dd>
+        </dl>
+        <button class="footer__more-button button">Подробнее</button>
+      </div>
+    </footer>
+    <script src="./main.js" type="text/javascript"></script>
+  </body>
+</html>
